@@ -6,7 +6,7 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 app.get('/',(req,res) =>{
-    'Enzo Patriarca apirest(nodejs)'
+    res.send('This is homepage for Enzo Patriarca apirest(nodejs)\n This api has 3 routes/api/list_users/:number? with or without a number (List users) \n/api/user_info/:username (Gets user info)\n /api/user_repos/:username (Gets user repositories info)')
 })
 app.get('/api/list_users/:number?',(req,res)=>{
     const parametro = req.params['number'];
