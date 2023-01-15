@@ -5,7 +5,9 @@ const cors = require('cors')
 const app = express()
 app.use(express.json())
 app.use(cors())
-
+app.get('/',(req,res) =>{
+    'Enzo Patriarca apirest(nodejs)'
+})
 app.get('/api/list_users/:number?',(req,res)=>{
     const parametro = req.params['number'];
     var aux = ''
